@@ -30,11 +30,11 @@ function App() {
     if (newMode === 'light') {
       document.body.style.backgroundColor = 'white';
       showAlert('Light mode enabled', 'success');
-      // document.title='TextUtils-Light Mode'
+      
     } else if (newMode === 'dark') {
       document.body.style.backgroundColor = '#343a40';
       showAlert('Dark mode enabled', 'success');
-       // document.title='TextUtils-Dark Mode'
+
     } else if (newMode === 'green') {
       document.body.style.backgroundColor = '#014d40';
       showAlert('Green mode enabled', 'success');
@@ -46,16 +46,16 @@ function App() {
   
   return (
     <>
-    <Router>
-      <Navbar title="TextUtils" AboutText="About" mode ={mode} toggleMode={toggleMode} />
-      <Alert alert={alert}/>
+     <Router>
+    <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} AboutText="About Us"/>
+    <Alert alert={alert} />
     <div className="container">
-  <Routes>
-  <Route path="/about" element={<About />} />
-  <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter Text Here" mode={mode} />} />
-</Routes>
+      <Routes>
+        <Route path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils-Word Counter, Charactercounter, Remove ExtraSpaces" mode={mode} />} />
+        <Route path="/about" element={<About mode={mode} />} />
+      </Routes>
     </div>
-    </Router>
+  </Router>
     </>
   );
 }

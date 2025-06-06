@@ -13,7 +13,7 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+          <Link className="nav-link " aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/about">{props.AboutText}</Link>
@@ -26,12 +26,12 @@ export default function Navbar(props) {
       </form>
       <div className={`form-check form-switch text-${props.mode==='light'? 'dark' : 'light'}`}>
       <label >Select Theme:</label>
-      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('dark')} >Dark</button>
-      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('green')} >Green</button>
-      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('red')} >Red</button>
-      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('light')} >Light</button>
-      <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-      <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('dark')} style={{ color: '#17cbd1', border: '2px solid #17cbd1', backgroundColor: 'transparent' }}>Dark</button>
+      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('green')} style={{ color: 'green', border: '2px solid green', backgroundColor: 'transparent' }} >Green</button>
+      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('red')}  style={{ color: 'red', border: '2px solid red', backgroundColor: 'transparent' }}>Red</button>
+      <button className="btn btn-sm btn-outline-dark mx-1" onClick={()=>props.toggleMode('light')}style={{ color: 'gray', border: '2px solid gray', backgroundColor: 'transparent' }} >Light</button>
+      
+     
     </div>
     </div>
   </div>
